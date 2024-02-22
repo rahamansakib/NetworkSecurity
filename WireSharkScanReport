@@ -1,0 +1,27 @@
+Wireshark Scan Summary Report
+
+Capture Date: 2024-02-22
+Capture Duration: 10 minutes
+
+Network Traffic Overview:
+- Total Packets Captured: 5000
+- Protocols Detected:
+  - TCP: 60%
+  - UDP: 20%
+  - ICMP: 10%
+  - Other: 10%
+
+Top Talkers (Endpoints generating the most traffic):
+1. 192.168.1.10 (30% of total traffic)
+2. 192.168.1.20 (25% of total traffic)
+3. 192.168.1.30 (20% of total traffic)
+
+Top Applications/Services Detected:
+1. HTTP (30% of total traffic)
+2. DNS (20% of total traffic)
+3. SSH (15% of total traffic)
+
+Top Conversations (Communication between endpoints):
+1. 192.168.1.10 <-> 192.168.1.20 (25% of total traffic)
+2. 192.168.1.10 <-> 192.168.1.30 (20% of total traffic)
+3. 192.168.1.20 <-> 192.168.1.30 (15% of total traffic)
