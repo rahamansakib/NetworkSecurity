@@ -1,16 +1,189 @@
-Starting Nmap 7.91 ( https://nmap.org ) at 2024-02-22 12:00 EST
-Nmap scan report for example.com (192.0.2.1)
-Host is up (0.045s latency).
-Not shown: 998 closed ports
-PORT     STATE SERVICE
-22/tcp   open  ssh
-|_SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3
-80/tcp   open  http
-|_http-title: Example Domain
-443/tcp  open  https
-|_http-title: Example Domain
-8080/tcp open  http-proxy
-|_http-title: Example Domain
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-02-22 21:44 Bangladesh Standard Time
+NSE: Loaded 156 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 21:44
+Completed NSE at 21:44, 0.00s elapsed
+Initiating NSE at 21:44
+Completed NSE at 21:44, 0.00s elapsed
+Initiating NSE at 21:44
+Completed NSE at 21:44, 0.00s elapsed
+Initiating Ping Scan at 21:44
+Scanning freepik.com (35.190.81.132) [4 ports]
+Completed Ping Scan at 21:44, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 21:44
+Completed Parallel DNS resolution of 1 host. at 21:44, 0.08s elapsed
+Initiating SYN Stealth Scan at 21:44
+Scanning freepik.com (35.190.81.132) [1000 ports]
+Discovered open port 80/tcp on 35.190.81.132
+Discovered open port 443/tcp on 35.190.81.132
+Completed SYN Stealth Scan at 21:45, 5.96s elapsed (1000 total ports)
+Initiating Service scan at 21:45
+Scanning 2 services on freepik.com (35.190.81.132)
+Service scan Timing: About 50.00% done; ETC: 21:47 (0:01:00 remaining)
+Completed Service scan at 21:46, 70.02s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against freepik.com (35.190.81.132)
+Retrying OS detection (try #2) against freepik.com (35.190.81.132)
+Initiating Traceroute at 21:46
+Completed Traceroute at 21:46, 3.02s elapsed
+Initiating Parallel DNS resolution of 8 hosts. at 21:46
+Completed Parallel DNS resolution of 8 hosts. at 21:46, 0.17s elapsed
+NSE: Script scanning 35.190.81.132.
+Initiating NSE at 21:46
+Completed NSE at 21:46, 6.27s elapsed
+Initiating NSE at 21:46
+Completed NSE at 21:46, 1.66s elapsed
+Initiating NSE at 21:46
+Completed NSE at 21:46, 0.00s elapsed
+Nmap scan report for freepik.com (35.190.81.132)
+Host is up (0.035s latency).
+rDNS record for 35.190.81.132: 132.81.190.35.bc.googleusercontent.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 54
+|     Content-Type: text/html; charset=UTF-8
+|     Date: Thu, 22 Feb 2024 15:45:26 GMT
+|     <html><title>Error 400 (Bad Request)!!1</title></html>
+|   FourOhFourRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Cache-Control: private
+|     Location: https://35.190.81.132:443/nice%20ports%2C/Trinity.txt.bak
+|     Content-Length: 0
+|     Date: Thu, 22 Feb 2024 15:45:15 GMT
+|     Content-Type: text/html; charset=UTF-8
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Cache-Control: private
+|     Location: https://35.190.81.132:443/
+|     Content-Length: 0
+|     Date: Thu, 22 Feb 2024 15:45:10 GMT
+|     Content-Type: text/html; charset=UTF-8
+|   Help: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 273
+|     Date: Thu, 22 Feb 2024 15:45:26 GMT
+|     <html><head>
+|     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body text=#000000 bgcolor=#ffffff>
+|     <h1>Error: Bad Request</h1>
+|     <h2>Your client has issued a malformed or illegal request.</h2>
+|     <h2></h2>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 273
+|     Date: Thu, 22 Feb 2024 15:45:10 GMT
+|     <html><head>
+|     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body text=#000000 bgcolor=#ffffff>
+|     <h1>Error: Bad Request</h1>
+|     <h2>Your client has issued a malformed or illegal request.</h2>
+|     <h2></h2>
+|_    </body></html>
+|_http-title: Did not follow redirect to https://freepik.com:443/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+443/tcp open  ssl/https istio-envoy
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: istio-envoy
+| ssl-cert: Subject: commonName=freepik.com
+| Subject Alternative Name: DNS:freepik.com, DNS:www.freepik.com
+| Issuer: commonName=R3/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-02-14T17:46:50
+| Not valid after:  2024-05-14T17:46:49
+| MD5:   0b5d:b958:7d26:a6f4:3c0b:0b02:2ffb:021e
+|_SHA-1: b10c:f267:5d05:e80d:8134:0b00:1b64:ea98:7f0f:b5e7
+| tls-nextprotoneg: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+| tls-alpn: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+|_http-title: 403
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.94%I=7%D=2/22%Time=65D76C05%P=i686-pc-windows-windows%r(
+SF:GetRequest,C0,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Contro
+SF:l:\x20private\r\nLocation:\x20https://35\.190\.81\.132:443/\r\nContent-
+SF:Length:\x200\r\nDate:\x20Thu,\x2022\x20Feb\x202024\x2015:45:10\x20GMT\r
+SF:\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(HTTPOptions,
+SF:C0,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Control:\x20priva
+SF:te\r\nLocation:\x20https://35\.190\.81\.132:443/\r\nContent-Length:\x20
+SF:0\r\nDate:\x20Thu,\x2022\x20Feb\x202024\x2015:45:10\x20GMT\r\nContent-T
+SF:ype:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(RTSPRequest,1AD,"HTTP/1
+SF:\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=
+SF:UTF-8\r\nReferrer-Policy:\x20no-referrer\r\nContent-Length:\x20273\r\nD
+SF:ate:\x20Thu,\x2022\x20Feb\x202024\x2015:45:10\x20GMT\r\n\r\n\n<html><he
+SF:ad>\n<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;charse
+SF:t=utf-8\">\n<title>400\x20Bad\x20Request</title>\n</head>\n<body\x20tex
+SF:t=#000000\x20bgcolor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<h2>Y
+SF:our\x20client\x20has\x20issued\x20a\x20malformed\x20or\x20illegal\x20re
+SF:quest\.</h2>\n<h2></h2>\n</body></html>\n")%r(FourOhFourRequest,DF,"HTT
+SF:P/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Control:\x20private\r\nL
+SF:ocation:\x20https://35\.190\.81\.132:443/nice%20ports%2C/Trinity\.txt\.
+SF:bak\r\nContent-Length:\x200\r\nDate:\x20Thu,\x2022\x20Feb\x202024\x2015
+SF::45:15\x20GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")
+SF:%r(DNSVersionBindReqTCP,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConte
+SF:nt-Length:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDat
+SF:e:\x20Thu,\x2022\x20Feb\x202024\x2015:45:26\x20GMT\r\n\r\n<html><title>
+SF:Error\x20400\x20\(Bad\x20Request\)!!1</title></html>")%r(DNSStatusReque
+SF:stTCP,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2054\r
+SF:\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Thu,\x2022\x
+SF:20Feb\x202024\x2015:45:26\x20GMT\r\n\r\n<html><title>Error\x20400\x20\(
+SF:Bad\x20Request\)!!1</title></html>")%r(Help,1AD,"HTTP/1\.0\x20400\x20Ba
+SF:d\x20Request\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nReferre
+SF:r-Policy:\x20no-referrer\r\nContent-Length:\x20273\r\nDate:\x20Thu,\x20
+SF:22\x20Feb\x202024\x2015:45:26\x20GMT\r\n\r\n\n<html><head>\n<meta\x20ht
+SF:tp-equiv=\"content-type\"\x20content=\"text/html;charset=utf-8\">\n<tit
+SF:le>400\x20Bad\x20Request</title>\n</head>\n<body\x20text=#000000\x20bgc
+SF:olor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<h2>Your\x20client\x2
+SF:0has\x20issued\x20a\x20malformed\x20or\x20illegal\x20request\.</h2>\n<h
+SF:2></h2>\n</body></html>\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Crestron XPanel control system (88%), FreeBSD 7.0-RELEASE (87%), FreeBSD 11.0-CURRENT (86%), FreeBSD 8.2-RELEASE (86%), Epson Stylus Pro 400 printer (86%), FreeBSD 10.2-RELEASE (85%), FreeBSD 10.3-RELEASE (85%), FreeBSD 11.0-RELEASE (85%), FreeBSD 11.0-STABLE (85%), FreeBSD 11.1-RELEASE (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.000 days (since Thu Feb 22 21:46:15 2024)
+Network Distance: 13 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
 
-Nmap done: 1 IP address (1 host up) scanned in 5.32 seconds
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   1.00 ms  192.168.0.1
+2   1.00 ms  10.194.5.1
+3   1.00 ms  10.20.249.225
+4   ...
+5   5.00 ms  118.253.nuclear.link3.net (203.76.118.253)
+6   6.00 ms  111.253.nuclear.link3.net (203.76.111.253)
+7   ... 9
+10  51.00 ms 72.14.197.112
+11  53.00 ms 142.250.238.121
+12  52.00 ms 142.251.241.3
+13  53.00 ms 132.81.190.35.bc.googleusercontent.com (35.190.81.132)
+
+NSE: Script Post-scanning.
+Initiating NSE at 21:46
+Completed NSE at 21:46, 0.00s elapsed
+Initiating NSE at 21:46
+Completed NSE at 21:46, 0.00s elapsed
+Initiating NSE at 21:46
+Completed NSE at 21:46, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 94.14 seconds
+           Raw packets sent: 2100 (94.932KB) | Rcvd: 108 (7.203KB)
